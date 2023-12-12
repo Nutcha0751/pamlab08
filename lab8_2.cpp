@@ -4,11 +4,11 @@
 using namespace std;
 
 //[Missing Code 1] Write definition of the function findGrade() here.
-double findGrade(double N){
-	if(N > 90) return 'A';
-	else if(N > 75 && N <= 90) return 'B';
-	else if(N > 60 && N <= 75) return 'C';
-	else if(N > 45 && N <= 60) return 'D';
+char findGrade(double x){
+	if(x > 90) return 'A';
+	else if(x > 75 && x <= 90) return 'B';
+	else if(x > 60 && x <= 75) return 'C';
+	else if(x > 45 && x <= 60) return 'D';
 	else return 'F';
 }
 
@@ -26,8 +26,10 @@ int main(){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
 		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]);
 		cout << "Score of student " << i+1 << ": ";
 		//[Missing Code 3] Get score of the i-th students.
+		cin >> score[i];
 		i++;
 	}
 	
